@@ -1,0 +1,283 @@
+
+/* Estilo geral */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222222;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+
+header {
+    margin-bottom: 30px;
+}
+
+/* Áreas principais */
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Labels */
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Inputs e seletores */
+
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    box-sizing: border-box;
+}
+
+/* Botões */
+
+button {
+    padding: 10px 15px;
+    margin: 5px 5px 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mensagem do login */
+
+#loginMessage {
+    font-weight: bold;
+}
+
+/* Mensagem de boas-vindas */
+
+#welcomeMessage {
+    margin-bottom: 15px;
+}
+
+/* Modo escuro */
+
+body.dark-mode {
+    background-color: #202020;
+    color: #f5f5f5;
+}
+
+body.dark-mode section {
+    background-color: #333333;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #444444;
+    color: white;
+    border: 1px solid #666666;
+}
+
+/* Elementos escondidos */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Painel meteorológico */
+
+#weatherSection h2 {
+    margin-bottom: 10px;
+}
+
+.weather-date {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.weather-item {
+    background-color: #f2f2f2;
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.weather-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.weather-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Compatibilidade com o modo escuro */
+
+body.dark-mode .weather-item {
+    background-color: #444;
+}
+
+body.dark-mode .weather-label,
+body.dark-mode .weather-date {
+    color: #ccc;
+}
+
+/* Lista de despesas */
+
+#expensesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#expensesList li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 14px;
+    margin-bottom: 12px;
+
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Texto da despesa */
+
+.expense-text {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Botões das despesas */
+
+#expensesList button {
+    margin: 0;
+}
+
+/* Botões no modo escuro */
+
+body.dark-mode button {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+/* Efeito ao passar o rato */
+
+body.dark-mode button:hover {
+    background-color: #686868;
+}
+
+/* Despesas no modo escuro */
+
+body.dark-mode #expensesList li {
+    background-color: #444;
+    border-color: #666;
+    color: #f5f5f5;
+}
+
+/* Texto das despesas */
+
+body.dark-mode .expense-text {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Botões verdes */
+button.btn-success {
+    background-color: #198754;
+    color: white;
+    border: 1px solid #198754;
+}
+
+/* Botões azuis */
+button.btn-primary {
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid #0d6efd;
+}
+
+/* Botões vermelhos */
+button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+}
+
+/* Efeitos ao passar o rato */
+button.btn-success:hover {
+    background-color: #157347;
+}
+
+button.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+button.btn-danger:hover {
+    background-color: #bb2d3b;
+}
+
+/* Manter as cores no modo escuro */
+body.dark-mode button.btn-success {
+    background-color: #198754;
+}
+
+body.dark-mode button.btn-primary {
+    background-color: #0d6efd;
+}
+
+body.dark-mode button.btn-danger {
+    background-color: #dc3545;
+}
+
+/* Caixa da data e hora */
+
+.date-time-box {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    padding: 12px 16px;
+    margin: 10px 0 15px;
+}
+
+.date-time-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.date-time-box p {
+    margin: 0;
+}
+
+/* Data e hora no modo escuro */
+
+body.dark-mode .date-time-box {
+    background-color: #444;
+    border-color: #666;
+    color: #f5f5f5;
+}

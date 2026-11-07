@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestor de Despesas Pessoais</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+
+   <header>
+
+    <h1>Gestor de Despesas Pessoais</h1>
+
+    <div class="date-time-box">
+        <span class="date-time-title">Data e Hora</span>
+        <p id="currentDateTime"></p>
+    </div>
+
+    <button id="themeButton" type="button">
+        Modo escuro
+    </button>
+
+</header>
+
+    <main>
+
+        <!-- Área de autenticação -->
+        <section id="authSection">
+
+            <h2>Iniciar sessão</h2>
+
+            <form id="loginForm">
+
+                <label for="userName">Nome de utilizador:</label>
+
+                <input
+                    type="text"
+                    id="userName"
+                    name="userName"
+                    placeholder="Introduza o seu nome"
+                    required
+                >
+
+                <button type="submit" class="btn-success">Entrar</button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </section>
+
+
+        <!-- Área principal da aplicação -->
+        <section id="appSection" hidden>
+
+            <h2 id="welcomeMessage"></h2>
+
+            <button id="logoutButton" type="button" class="btn-danger">
+                Terminar sessão
+            </button>
+
+
+            <!-- Formulário para adicionar despesas -->
+            <section id="expenseSection">
+
+                <h2>Adicionar despesas:</h2>
+
+                <form id="expenseForm">
+
+                    <label for="expenseDescription">Descrição:</label>
+
+                    <input
+                        type="text"
+                        id="expenseDescription"
+                        name="description"
+                        placeholder="Ex.: Compras no supermercado"
+                        required
+                    >
+
+                    <label for="expenseAmount">Valor (€):</label>
+
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        name="amount"
+                        placeholder="Ex.: 35.50"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+
+                    <label for="expenseCategory">Categoria:</label>
+
+                    <select id="expenseCategory" name="category" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="Alimentação">Alimentação</option>
+                        <option value="Transportes">Transportes</option>
+                        <option value="Habitação">Habitação</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Lazer">Lazer</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+
+                    <button type="submit" class="btn-success">Adicionar despesa</button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Lista de despesas -->
+            <section id="expensesSection">
+
+                <h2>As minhas despesas</h2>
+
+                <label for="categoryFilter">Filtrar por categoria:</label>
+
+                <select id="categoryFilter">
+                    <option value="Todas">Todas as categorias</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transportes">Transportes</option>
+                    <option value="Habitação">Habitação</option>
+                    <option value="Saúde">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <h3>
+                    Total de despesas:
+                    <span id="totalExpenses">0.00 €</span>
+                </h3>
+
+                <ul id="expensesList"></ul>
+
+            </section>
+
+            <!-- Informação meteorológica -->
+<section id="weatherSection">
+
+    <h2>Previsão meteorológica</h2>
+
+    <p id="weatherDate" class="weather-date"></p>
+
+    <div class="weather-grid">
+
+        <div class="weather-item">
+            <span class="weather-label">Temperatura máxima</span>
+            <strong id="maxTemperature" class="weather-value">-- °C</strong>
+        </div>
+
+        <div class="weather-item">
+            <span class="weather-label">Temperatura mínima</span>
+            <strong id="minTemperature" class="weather-value">-- °C</strong>
+        </div>
+
+        <div class="weather-item">
+            <span class="weather-label">Precipitação</span>
+            <strong id="precipitation" class="weather-value">-- mm</strong>
+        </div>
+
+    </div>
+
+    <p id="weatherInfo">A carregar informação meteorológica...</p>
+
+    <button id="refreshWeather" type="button" class="btn-primary">
+    Atualizar meteorologia
+</button>
+
+</section>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
